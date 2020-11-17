@@ -1,22 +1,60 @@
 import React from 'react';
-import BlogPostForm from './components/BlogPostForm';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import CommentForm from './components/CommentForm';
-import CommentList from './components/CommentList';
+import Navbar from './components/Navbar';
+import Home from './views/Home';
+import AboutLawrence from './views/AboutLawrence';
+import AboutThisSite from './views/AboutThisSite';
+import Solutions from './views/Solutions';
+import Benefits from './views/Benefits';
+import ContactForm from './views/ContactForm';
+import SingleBlogPost from './views/SingleBlogPost';
+import Footer from './components/Footer';
+import Error from './views/Error';
+
+// import admin functions
 
 // router wrapping
 
 const App = () => {
   return (
-    <>
-      <h1>I work</h1>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
 
-      <BlogPostForm />
+        <Route path='/aboutlawrence'>
+          <AboutLawrence />
+        </Route>
 
-      <CommentList />
+        <Route path='/aboutsite'>
+          <AboutThisSite />
+        </Route>
 
-      <CommentForm />
-    </>
+        <Route path='/solutions'>
+          <Solutions />
+        </Route>
+
+        <Route path='/benefits'>
+          <Benefits />
+        </Route>
+
+        <Route exact path='/contact'>
+          <ContactForm />
+        </Route>
+
+        <Route path='/blog/:id'>
+          <SingleBlogPost />
+        </Route>
+
+        <Route path='*'>
+          <Error />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 };
 
