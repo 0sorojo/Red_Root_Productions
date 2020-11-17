@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 import Home from './views/Home';
 import AboutLawrence from './views/AboutLawrence';
 import AboutThisSite from './views/AboutThisSite';
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+      <Sidebar />
       <Switch>
         <Route exact path='/'>
           <Home />
