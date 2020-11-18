@@ -16,7 +16,7 @@ const Sidebar = () => {
           <FaTimes />
         </button>
       </div>
-      <ul className='links'>
+      <ul>
         {links.map((link) => {
           const { id, url, text, icon } = link;
           return (

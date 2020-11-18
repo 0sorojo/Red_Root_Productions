@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className={`${isSidebarOpen ? 'nav hide-nav' : 'nav'}`}>
       <div className='nav-center'>
         <div className='nav-header'>
-          <button className='btn' onClick={openSidebar}>
+          <button className='btn bounce' onClick={openSidebar}>
             <FaBars />
           </button>
 
