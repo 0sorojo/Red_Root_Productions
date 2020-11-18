@@ -34,12 +34,7 @@ const Sidebar = () => {
           const { id, url, icon } = link;
           return (
             <li key={id}>
-              <a
-                href={url}
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={closeSidebar}
-              >
+              <a href={url} target='_blank' rel='noopener noreferrer'>
                 {icon}
               </a>
             </li>

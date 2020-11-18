@@ -97,6 +97,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
+  font-size: 1rem;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -132,6 +133,8 @@ p {
   cursor: pointer;
   transition: var(--transition);
   outline: none;
+  align-items: center;
+  display: flex;
 }
 .btn:hover {
   background: transparent;
@@ -154,7 +157,7 @@ p {
 
 .hide-nav {
   transition: var(--transition);
-  transform: translate(100%);
+  transform: translate(-100%);
 }
 
 .nav-center {
@@ -176,6 +179,11 @@ p {
 .bounce {
   transition: var(--transition);
   animation: bounce 3s ease-in-out infinite;
+}
+
+.toggle {
+  font-size: 2.5rem;
+  padding: 0 0;
 }
 
 @keyframes bounce {
@@ -228,6 +236,7 @@ p {
   cursor: pointer;
   color: var(--clr-orange);
   margin-top: 0.2rem;
+  outline: none;
 }
 .close-btn:hover {
   color: var(--clr-red-light);
@@ -322,6 +331,56 @@ p {
   line-height: 1.8;
 }
 
+/* accordion styles */
+
+.accordion-container {
+  transition: all 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.accordion {
+  height: 3rem;
+  background: var(--clr-orange);
+  align-items: center;
+  display: flex;
+  border-bottom: 2px groove var(--clr-green-light);
+  justify-content: space-between;
+}
+
+.accordion-title {
+  margin-left: 2rem;
+  display: flex;
+  color: var(--clr-white);
+  margin-bottom: 0;
+}
+
+.accordion-text {
+  margin: 0 1rem;
+  padding: 0 1rem;
+  display: flex;
+  color: var(--clr-primary-1);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  font-size: 1.25rem;
+}
+
+.arrow-btn {
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  display: flex;
+  color: var(--clr-yellow);
+  margin-right: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
 /* footer styling  */
 
 .footer {
@@ -339,6 +398,7 @@ p {
   height: 4rem;
   width: 100%;
   display: flex;
+  align-items: center;
   flex: 0 1 auto;
   justify-content: space-around;
   font-size: 2rem;
@@ -349,6 +409,7 @@ p {
   height: 4rem;
   width: 100%;
   display: flex;
+  align-items: center;
   flex: 0 2 auto;
   justify-content: space-around;
   font-size: 2rem;
@@ -359,21 +420,4 @@ p {
   font-size: 2rem;
   color: var(--clr-green-dark);
   transition: var(--transition);
-}
-
-/* accordion styles */
-
-.accordion {
-  height: 3rem;
-  background: var(--clr-orange);
-  align-items: center;
-  display: flex;
-  border-bottom: 2px groove var(--clr-green-light);
-}
-
-.accordion-text {
-  margin-left: 2rem;
-  display: flex;
-  color: var(--clr-white);
-  margin-bottom: 0;
 }

@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to='/'>
             <img src={logo} alt='red root' className='nav-logo' />
           </Link>
-          <button className='btn'>
+          <button className='btn toggle'>
             <FaToggleOn />
           </button>
         </div>
