@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  IoIoArrowDroprightCircle,
+  IoIosArrowDroprightCircle,
+} from 'react-icons/io';
 
 import useComments from '../utils/useComments';
 
@@ -9,8 +13,8 @@ const BlogList = () => {
   const blogs = useComments(sortBy, 'blog');
 
   return (
-    <div>
-      <div>
+    <section className='blog-container'>
+      <div className='sort-bar'>
         <label htmlFor='sort'>Sort by:</label>
         <select
           value={sortBy}
@@ -23,18 +27,24 @@ const BlogList = () => {
       </div>
       {blogs.map((blog) => {
         return (
-          <article key={blog.id}>
+          <article key={blog.id} className='blog'>
+            <h4 className='entry-type-name'>BLOG POST</h4>
             <div>
-              <h3>{blog.title}</h3>
+              <h3 className='blog-title'>{blog.title}</h3>
             </div>
 
-            <Link className='btn' to={`/blog/${blog.id}`}>
-              Read More
-            </Link>
+            <div className='blog-link-container'>
+              <Link to={`/blog/${blog.id}`} className='blog-link'>
+                Read More
+              </Link>
+              <Link to={`/blog/${blog.id}`} className='blog-link'>
+                <IoIosArrowDroprightCircle />
+              </Link>
+            </div>
           </article>
         );
       })}
-    </div>
+    </section>
   );
 };
 

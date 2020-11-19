@@ -32,7 +32,7 @@ const SingleBlogPost = () => {
   }, [getBlog]);
 
   return (
-    <section className='blog-container'>
+    <section>
       <article>
         <h2>{blog.title}</h2>
         <p>{blog.body}</p>
