@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import fire from '../auth/firebase';
 
-const CommentForm = () => {
+const CommentForm = ({ id }) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
@@ -12,6 +12,7 @@ const CommentForm = () => {
       .firestore()
       .collection('comments')
       .add({
+        blogID: id,
         title,
         body,
         time: new Date().getTime(),

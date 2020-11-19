@@ -12,6 +12,7 @@ import ContactForm from './views/ContactForm';
 import SingleBlogPost from './views/SingleBlogPost';
 import Footer from './components/Footer';
 import Error from './views/Error';
+import ControlPanel from './views/ControlPanel';
 
 // import admin functions
 
@@ -50,6 +51,10 @@ const App = () => {
 
         <Route path='/blog/:id'>
           <SingleBlogPost />
+        </Route>
+
+        <Route path='/admin'>
+          <ControlPanel />
         </Route>
 
         <Route path='*'>

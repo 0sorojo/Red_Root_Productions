@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 
 import useComments from '../utils/useComments';
 
-const CommentList = () => {
+const CommentList = ({ id }) => {
   const [sortBy, setSortBy] = useState('NONE');
 
-  const comments = useComments(sortBy);
+  const comments = useComments(sortBy, 'comments');
+
+  const filteredComments = comments.filter((comment) => comment.blogID === id);
+
+  console.log(filteredComments);
 
   return (
     <div>
@@ -22,7 +26,7 @@ const CommentList = () => {
         </select>
       </div>
       <ul>
-        {comments.map((comment) => {
+        {filteredComments.map((comment) => {
           return (
             <li key={comment.id}>
               <div>

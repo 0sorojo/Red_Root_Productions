@@ -7,13 +7,13 @@ const SORT_OPTION = {
   TIME_DESC: { column: 'time', direction: 'desc' },
 };
 
-const useComments = (sortBy) => {
+const useComments = (sortBy, collection) => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
     const unsubscribe = fire
       .firestore()
-      .collection('comments')
+      .collection(collection)
       .orderBy(SORT_OPTION[sortBy].column, SORT_OPTION[sortBy].direction)
       .onSnapshot((snapshot) => {
         const newComment = snapshot.docs.map((doc) => ({
