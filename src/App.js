@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import PrivateRoute from './utils/PrivateRoute';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Home from './views/Home';
@@ -13,6 +13,7 @@ import SingleBlogPost from './views/SingleBlogPost';
 import Footer from './components/Footer';
 import Error from './views/Error';
 import ControlPanel from './views/ControlPanel';
+import AdminLogIn from './views/AdminLogIn';
 
 // import admin functions
 
@@ -53,8 +54,12 @@ const App = () => {
           <SingleBlogPost />
         </Route>
 
-        <Route path='/admin'>
+        <PrivateRoute exact path='/admin'>
           <ControlPanel />
+        </PrivateRoute>
+
+        <Route exact path='/adminLogMeIn'>
+          <AdminLogIn />
         </Route>
 
         <Route path='*'>

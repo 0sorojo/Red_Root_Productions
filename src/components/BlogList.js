@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import moment from 'moment';
 import { Link } from 'react-router-dom';
 import {
   IoIoArrowDroprightCircle,
@@ -29,9 +30,14 @@ const BlogList = () => {
         return (
           <article key={blog.id} className='blog'>
             <h4 className='entry-type-name'>BLOG POST</h4>
+
             <div>
               <h3 className='blog-title'>{blog.title}</h3>
             </div>
+
+            <h4 className='entry-type-name'>
+              {moment(blog.time).format('MMMM Do, YYYY')}
+            </h4>
 
             <div className='blog-link-container'>
               <Link to={`/blog/${blog.id}`} className='blog-link'>

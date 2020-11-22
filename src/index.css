@@ -4,7 +4,51 @@ Variables
 ===============
 */
 
-:root {
+/* :root { */
+/* dark shades of primary color*/
+/* --clr-primary-1: hsl(2.3, 86%, 17%);
+  --clr-primary-2: hsl(2.3, 77%, 27%);
+  --clr-primary-3: hsl(2.3, 72%, 37%);
+  --clr-primary-4: hsl(2.3, 63%, 48%); */
+/* primary/main color */
+/* --clr-primary-5: hsl(2.3, 100%, 59.2%); */
+/* lighter shades of primary color */
+/* --clr-primary-6: hsl(2.3, 89%, 70%);
+  --clr-primary-7: hsl(2.3, 90%, 76%);
+  --clr-primary-8: hsl(2.3, 86%, 81%);
+  --clr-primary-9: hsl(2.3, 90%, 88%);
+  --clr-primary-10: hsl(2.3, 100%, 96%);
+  --clr-primary-white: hsl(15, 100%, 97.6%); */
+/* darkest grey - used for headings */
+/* --clr-grey-1: hsl(2.3, 61%, 16%);
+  --clr-grey-2: hsl(2.3, 39%, 23%);
+  --clr-grey-3: hsl(2.3, 34%, 30%);
+  --clr-grey-4: hsl(2.3, 28%, 39%); */
+/* grey used for paragraphs */
+/* --clr-grey-5: hsl(2.3, 22%, 49%);
+  --clr-grey-6: hsl(2.3, 23%, 60%);
+  --clr-grey-7: hsl(2.3, 27%, 70%);
+  --clr-grey-8: hsl(2.3, 31%, 80%);
+  --clr-grey-9: hsl(2.3, 33%, 89%);
+  --clr-grey-10: hsl(2.3, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: #ff372f;
+  --clr-red-light: hsl(16.2, 71%, 66%);
+  --clr-orange: hsl(30.6, 89%, 57.3%);
+  --clr-yellow: hsl(50, 93.5%, 69.8%);
+  --clr-green-dark: hsl(51.4, 57.9%, 47.5%);
+  --clr-green-light: hsl(87.7, 81.6%, 72.4%);
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px; */
+/* } */
+
+.light-theme {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(2.3, 86%, 17%);
   --clr-primary-2: hsl(2.3, 77%, 27%);
@@ -46,6 +90,52 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  --hero: url(./images/yellowSVGHEROv1.svg);
+}
+
+.dark-theme {
+  /* light shades of primary color*/
+  --clr-primary-1: hsl(2.3, 90%, 88%);
+  --clr-primary-2: hsl(2.3, 86%, 81%);
+  --clr-primary-3: hsl(2.3, 90%, 76%);
+  --clr-primary-4: hsl(2.3, 89%, 70%);
+  /* primary/main color */
+  --clr-primary-5: hsl(2.3, 100%, 59.2%);
+  /* darker shades of primary color */
+  --clr-primary-6: hsl(2.3, 63%, 48%);
+  --clr-primary-7: hsl(2.3, 72%, 37%);
+  --clr-primary-8: hsl(2.3, 77%, 27%);
+  --clr-primary-9: hsl(2.3, 86%, 17%);
+  --clr-primary-10: hsl(2.3, 100%, 10%);
+  --clr-primary-white: hsl(15, 100%, 5%);
+  /* lightest grey - used for headings */
+  --clr-grey-1: hsl(2.3, 36%, 96%);
+  --clr-grey-2: hsl(2.3, 33%, 89%);
+  --clr-grey-3: hsl(2.3, 31%, 80%);
+  --clr-grey-4: hsl(2.3, 27%, 70%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(2.3, 23%, 60%);
+  --clr-grey-6: hsl(2.3, 22%, 49%);
+  --clr-grey-7: hsl(2.3, 28%, 39%);
+  --clr-grey-8: hsl(2.3, 34%, 30%);
+  --clr-grey-9: hsl(2.3, 39%, 23%);
+  --clr-grey-10: hsl(2.3, 61%, 16%);
+  --clr-white: #222;
+  --clr-red-dark: hsl(16.2, 71%, 66%);
+  --clr-red-light: #ff372f;
+  --clr-orange: hsl(309.9, 100%, 26.3%);
+  --clr-yellow: hsl(331.7, 100%, 45.7%);
+  --clr-green-dark: hsl(210.5, 100%, 11.2%);
+  --clr-green-light: hsl(205.9, 95.3%, 42%);
+  --clr-black: #fff;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  --hero: url(./images/purpleSVGHEROv1.svg);
 }
 /*
 =============== 
@@ -100,6 +190,7 @@ p {
   color: var(--clr-primary-white);
   font-size: 1rem;
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -295,7 +386,7 @@ p {
   width: 100%;
   top: 0;
   left: 0;
-  background: url(./images/yellowSVGHEROv1.svg) bottom center;
+  background: var(--hero) bottom center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
