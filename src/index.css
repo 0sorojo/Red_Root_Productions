@@ -48,6 +48,11 @@ Variables
   --fixed-width: 620px; */
 /* } */
 
+:root {
+  --hero1: url(./images/yellowSVGHEROv1.svg);
+  --hero2: url(./images/purpleSVGHEROv1.svg);
+}
+
 .light-theme {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(2.3, 86%, 17%);
@@ -90,7 +95,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-  --hero: url(./images/yellowSVGHEROv1.svg);
+  --hero: var(--hero1);
 }
 
 .dark-theme {
@@ -135,7 +140,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-  --hero: url(./images/purpleSVGHEROv1.svg);
+  --hero: var(--hero2);
 }
 /*
 =============== 
