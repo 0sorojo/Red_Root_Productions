@@ -4,18 +4,8 @@ import logo from '../images/redRootSVGLOGO.svg';
 import { FaBars, FaToggleOff, FaToggleOn } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 
-const getStorageTheme = () => {
-  let theme = 'light-theme';
-  if (localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
-  }
-  return theme;
-};
-
 const Navbar = () => {
-  const { openSidebar, isSidebarOpen } = useGlobalContext();
-
-  const [theme, setTheme] = useState(getStorageTheme());
+  const { openSidebar, isSidebarOpen, theme, setTheme } = useGlobalContext();
 
   const toggleTheme = () => {
     if (theme === 'light-theme') {
@@ -24,11 +14,6 @@ const Navbar = () => {
       setTheme('light-theme');
     }
   };
-
-  useEffect(() => {
-    document.documentElement.className = theme;
-    localStorage.setItem('theme', theme);
-  }, [theme]);
 
   return (
     <nav className={`${isSidebarOpen ? 'nav hide-nav' : 'nav'}`}>
