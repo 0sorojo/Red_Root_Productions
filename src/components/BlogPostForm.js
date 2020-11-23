@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import fire from '../auth/firebase';
 
-const BlogPostForm = () => {
+const BlogPostForm = ({ fileUrl, setFileUrl }) => {
   const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [bodyOne, setBodyOne] = useState('');
+  const [quote, setQuote] = useState('');
+  const [bodyTwo, setBodyTwo] = useState('');
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -13,12 +15,18 @@ const BlogPostForm = () => {
       .collection('blog')
       .add({
         title,
-        body,
+        fileUrl,
+        bodyOne,
+        quote,
+        bodyTwo,
         time: new Date().getTime(),
       })
       .then(() => {
         setTitle('');
-        setBody('');
+        setBodyOne('');
+        setQuote('');
+        setBodyTwo('');
+        setFileUrl(null);
       });
   };
 
@@ -35,11 +43,27 @@ const BlogPostForm = () => {
           />
         </div>
         <div className='comment-info'>
-          <label htmlFor='body'>Comment</label>
+          <label htmlFor='bodyOne'>1st Part</label>
           <textarea
             type='text'
-            value={body}
-            onChange={(e) => setBody(e.currentTarget.value)}
+            value={bodyOne}
+            onChange={(e) => setBodyOne(e.currentTarget.value)}
+          />
+        </div>
+        <div className='comment-info'>
+          <label htmlFor='quote'>Quote</label>
+          <input
+            type='text'
+            value={quote}
+            onChange={(e) => setQuote(e.currentTarget.value)}
+          />
+        </div>
+        <div className='comment-info'>
+          <label htmlFor='bodyTwo'>2nd Part</label>
+          <textarea
+            type='text'
+            value={bodyTwo}
+            onChange={(e) => setBodyTwo(e.currentTarget.value)}
           />
         </div>
         <button className='btn'>Add Blog</button>

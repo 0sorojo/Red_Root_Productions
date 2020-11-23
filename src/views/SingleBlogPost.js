@@ -36,14 +36,16 @@ const SingleBlogPost = () => {
     <section>
       <article className='blog'>
         <h4 className='entry-type-name'>BLOG POST</h4>
-
+        <img src={blog.fileUrl} alt='' className='blog-image' />
         <div>
           <h3 className='blog-title'>{blog.title}</h3>
         </div>
         <h4 className='entry-type-name'>
           {moment(blog.time).format('MMMM Do, YYYY')}
         </h4>
-        <p className='blog-text'>{blog.body}</p>
+        <p className='blog-text'>{blog.bodyOne}</p>
+        <h2>{blog.quote}</h2>
+        <p className='blog-text'>{blog.bodyTwo}</p>
       </article>
       <CommentList id={id} />
       <CommentForm id={id} />

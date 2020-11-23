@@ -9,14 +9,16 @@ const AccordionInfo = ({ title, info }) => {
   const content = useRef(null);
 
   const handleClick = () => {
-    setHeight(showInfo ? '0px' : `${content.current.scrollHeight}px`);
-    setMargin(showInfo ? 0 : '2rem 1rem');
+    const actualHeight = content.current.scrollHeight + 32;
+
+    setHeight(showInfo ? '0px' : `${actualHeight}px`);
+    setMargin(showInfo ? 0 : '1rem 1rem');
     setShowInfo(!showInfo);
   };
 
   return (
     <article className='accordion-container'>
-      <header className='accordion'>
+      <header className='accordion' onClick={handleClick}>
         <h3 className='accordion-title'>{title}</h3>
         <button
           className={`${showInfo ? 'arrow-btn rotate' : 'arrow-btn'}`}
