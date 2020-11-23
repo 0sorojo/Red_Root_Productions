@@ -388,16 +388,15 @@ p {
 .hero::before {
   content: '';
   position: absolute;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
   top: 0;
   left: 0;
   background: var(--hero) bottom center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  transform: translate3d(0, 0, 0);
-  /* transition: var(--transition); */
+  transition: opacity 250ms;
 }
 .hero {
   position: relative;
