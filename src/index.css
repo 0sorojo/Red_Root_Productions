@@ -391,7 +391,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  transition: var(--transition);
+  /* transition: var(--transition); */
 }
 .hero {
   position: relative;
@@ -428,7 +428,7 @@ p {
 /* accordion styles */
 
 .accordion-container {
-  transition: all 1s ease-in-out;
+  /* transition: all 1s ease-in-out; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
