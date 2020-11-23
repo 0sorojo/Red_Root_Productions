@@ -157,6 +157,7 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  transition: var(--transition);
 }
 ul {
   list-style-type: none;
@@ -386,11 +387,11 @@ p {
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--hero) bottom center;
+  background: var(--hero) center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  /* transition: var(--transition); */
+  transition: var(--transition);
 }
 .hero {
   position: relative;

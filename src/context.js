@@ -1,18 +1,17 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useCallback } from 'react';
 
 const AppContext = React.createContext();
 
+const getStorageTheme = () => {
+  let theme = 'light-theme';
+  if (localStorage.getItem('theme')) {
+    theme = localStorage.getItem('theme');
+  }
+  return theme;
+};
+
 const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const getStorageTheme = () => {
-    let theme = 'light-theme';
-    if (localStorage.getItem('theme')) {
-      theme = localStorage.getItem('theme');
-    }
-    return theme;
-  };
-
   const [theme, setTheme] = useState(getStorageTheme());
 
   const openSidebar = () => {
