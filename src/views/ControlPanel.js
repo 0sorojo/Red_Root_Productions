@@ -6,12 +6,14 @@ const ControlPanel = () => {
   const { handleLogOut } = useContext(AuthContext);
 
   return (
-    <div>
-      <h3>
+    <div className='control-container'>
+      <h3 className='control-title'>
         This is where the admin uploads / edits / deletes their blog posts
       </h3>
       <BlogPostForm />
-      <button onClick={handleLogOut}>Log Out</button>
+      <button onClick={handleLogOut} className='control-btn'>
+        Log Out
+      </button>
     </div>
   );
 };

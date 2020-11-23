@@ -24,10 +24,10 @@ const CommentForm = ({ id }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <h4>Leave a Comment</h4>
-        <div>
+    <div className='form-container'>
+      <h4>Leave a Comment</h4>
+      <form onSubmit={onSubmit} className='form'>
+        <div className='comment-info'>
           <label htmlFor='title'>Title</label>
           <input
             type='text'
@@ -35,7 +35,7 @@ const CommentForm = ({ id }) => {
             onChange={(e) => setTitle(e.currentTarget.value)}
           />
         </div>
-        <div>
+        <div className='comment-info'>
           <label htmlFor='comment'>Comment</label>
           <input
             type='text'
@@ -43,7 +43,9 @@ const CommentForm = ({ id }) => {
             onChange={(e) => setBody(e.currentTarget.value)}
           />
         </div>
-        <button>Add Comment</button>
+        <button className='btn' type='submit'>
+          Add Comment
+        </button>
       </form>
     </div>
   );

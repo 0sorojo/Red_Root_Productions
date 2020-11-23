@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import moment from 'moment';
 import useComments from '../utils/useComments';
 
 const CommentList = ({ id }) => {
@@ -13,8 +13,8 @@ const CommentList = ({ id }) => {
 
   return (
     <div>
-      <h2>Comments</h2>
-      <div>
+      <h3 className='comment'>Comments</h3>
+      <div className='sort-bar'>
         <label htmlFor='sort'>Sort by:</label>
         <select
           value={sortBy}
@@ -25,18 +25,20 @@ const CommentList = ({ id }) => {
           <option value='TIME_ASC'>Oldest</option>
         </select>
       </div>
-      <ul>
+      <section>
         {filteredComments.map((comment) => {
           return (
-            <li key={comment.id}>
-              <div>
-                <h3>{comment.title}</h3>
-                <p>{comment.body}</p>
-              </div>
-            </li>
+            <div className='comment-div' key={comment.id}>
+              <h3 className='comment-title'>{comment.title}</h3>
+
+              <p className='comment-date'>
+                {moment(comment.time).format('MMMM Do, YYYY')}
+              </p>
+              <p>{comment.body}</p>
+            </div>
           );
         })}
-      </ul>
+      </section>
     </div>
   );
 };

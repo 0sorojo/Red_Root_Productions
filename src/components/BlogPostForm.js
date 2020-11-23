@@ -23,10 +23,10 @@ const BlogPostForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <h4>Submit your Blog Post</h4>
-        <div>
+    <div className='form-container'>
+      <form onSubmit={onSubmit} className='form'>
+        <h4>Submit a Blog Post</h4>
+        <div className='comment-info'>
           <label htmlFor='title'>Title</label>
           <input
             type='text'
@@ -34,7 +34,7 @@ const BlogPostForm = () => {
             onChange={(e) => setTitle(e.currentTarget.value)}
           />
         </div>
-        <div>
+        <div className='comment-info'>
           <label htmlFor='body'>Comment</label>
           <textarea
             type='text'
@@ -42,7 +42,7 @@ const BlogPostForm = () => {
             onChange={(e) => setBody(e.currentTarget.value)}
           />
         </div>
-        <button>Add Comment</button>
+        <button className='btn'>Add Blog</button>
       </form>
     </div>
   );

@@ -4,6 +4,7 @@ import fire from '../auth/firebase';
 import { useCallback } from 'react';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
+import moment from 'moment';
 
 const SingleBlogPost = () => {
   const { id } = useParams();
@@ -33,9 +34,16 @@ const SingleBlogPost = () => {
 
   return (
     <section>
-      <article>
-        <h2>{blog.title}</h2>
-        <p>{blog.body}</p>
+      <article className='blog'>
+        <h4 className='entry-type-name'>BLOG POST</h4>
+
+        <div>
+          <h3 className='blog-title'>{blog.title}</h3>
+        </div>
+        <h4 className='entry-type-name'>
+          {moment(blog.time).format('MMMM Do, YYYY')}
+        </h4>
+        <p className='blog-text'>{blog.body}</p>
       </article>
       <CommentList id={id} />
       <CommentForm id={id} />

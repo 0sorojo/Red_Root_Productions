@@ -28,26 +28,32 @@ const AdminLogIn = ({ history }) => {
   }
 
   return (
-    <section>
+    <section className='form-container'>
       <h3>This is where the Admin Logs in</h3>
-      <form onSubmit={handleLogin}>
-        <label>Email:</label>
-        <input
-          name='email'
-          type='email'
-          autoFocus
-          required
-          placeholder='email'
-        />
-        <label>Password:</label>
-        <input
-          name='password'
-          type='password'
-          autoFocus
-          required
-          placeholder='password'
-        />
-        <button type='submit'>Sign In</button>
+      <form onSubmit={handleLogin} className='form'>
+        <div className='contact-info'>
+          <label>Email:</label>
+          <input
+            name='email'
+            type='email'
+            autoFocus
+            required
+            placeholder='email'
+          />
+        </div>
+        <div className='contact-info'>
+          <label>Password:</label>
+          <input
+            name='password'
+            type='password'
+            autoFocus
+            required
+            placeholder='password'
+          />
+        </div>
+        <button type='submit' className='btn'>
+          Sign In
+        </button>
       </form>
     </section>
   );
