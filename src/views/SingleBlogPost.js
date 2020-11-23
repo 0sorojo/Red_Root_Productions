@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import fire from '../auth/firebase';
 import { useCallback } from 'react';
 import CommentList from '../components/CommentList';
@@ -30,7 +30,7 @@ const SingleBlogPost = () => {
   useEffect(() => {
     getBlog();
     console.log(id);
-  }, [getBlog]);
+  }, [getBlog, id]);
 
   return (
     <section>

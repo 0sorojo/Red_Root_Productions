@@ -25,7 +25,7 @@ const useComments = (sortBy, collection) => {
       });
 
     return () => unsubscribe();
-  }, [sortBy]);
+  }, [sortBy, collection]);
 
   return comments;
 };

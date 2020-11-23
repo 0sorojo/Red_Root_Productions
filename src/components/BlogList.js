@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
-import {
-  IoIoArrowDroprightCircle,
-  IoIosArrowDroprightCircle,
-} from 'react-icons/io';
+import { IoIosArrowDroprightCircle } from 'react-icons/io';
 
 import useComments from '../utils/useComments';
 
