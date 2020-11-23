@@ -383,13 +383,7 @@ p {
 .hero::before {
   content: '';
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: var(--hero) center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
   z-index: -1;
   transition: var(--transition);
 }
@@ -400,6 +394,13 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--hero) center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .hero-center {
   width: 85vw;
