@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
 
-const AccordionInfo = ({ title, info }) => {
+const AccordionInfo = ({ title, quote, info }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [height, setHeight] = useState('0px');
   const [margin, setMargin] = useState(0);
@@ -32,6 +32,8 @@ const AccordionInfo = ({ title, info }) => {
         style={{ maxHeight: `${height}`, margin: `${margin}` }}
         className='accordion-text'
       >
+        <h3>{quote}</h3>
+
         {info}
       </p>
     </article>

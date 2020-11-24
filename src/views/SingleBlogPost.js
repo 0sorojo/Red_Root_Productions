@@ -5,6 +5,7 @@ import { useCallback } from 'react';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 import moment from 'moment';
+import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
 
 const SingleBlogPost = () => {
   const { id } = useParams();
@@ -33,7 +34,7 @@ const SingleBlogPost = () => {
   }, [getBlog, id]);
 
   return (
-    <section>
+    <section className='blog-container'>
       <article className='blog'>
         <h4 className='entry-type-name'>BLOG POST</h4>
         <img src={blog.fileUrl} alt='' className='blog-image' />
@@ -44,7 +45,10 @@ const SingleBlogPost = () => {
           {moment(blog.time).format('MMMM Do, YYYY')}
         </h4>
         <p className='blog-text'>{blog.bodyOne}</p>
-        <h2>{blog.quote}</h2>
+        <div className='quote-container'>
+          <ImQuotesLeft />
+          <h2>{blog.quote}</h2> <ImQuotesRight />
+        </div>
         <p className='blog-text'>{blog.bodyTwo}</p>
       </article>
       <CommentList id={id} />

@@ -11,7 +11,7 @@ const BlogList = () => {
   const blogs = useComments(sortBy, 'blog');
 
   return (
-    <section className='blog-container'>
+    <section className='home-blog-container'>
       <div className='sort-bar'>
         <label htmlFor='sort'>Sort by:</label>
         <select
@@ -25,7 +25,7 @@ const BlogList = () => {
       </div>
       {blogs.map((blog) => {
         return (
-          <article key={blog.id} className='blog'>
+          <article key={blog.id} className='blog-list'>
             <h4 className='entry-type-name'>BLOG POST</h4>
 
             <div>

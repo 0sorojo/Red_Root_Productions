@@ -2,20 +2,23 @@ const accordion = [
   {
     id: 1,
     title: 'Vision',
+    quote: 'What does Success LOOK and FEEL like ',
     info:
-      "Dattebyo, guts you'll never catch me! Oiroke no Justsu! Mukashi youko are keri sono kitsune kokonotsu no o ari sono o ichido buri raba yamakuzure tsunami tatsu kore ni kouji tehito domo nin no yakare wo atsume keri. Wazuka one nin ga shinobinomono seishi wo kake kore wo fuuin seshimeru sono mono shi ne keri sono shinobinomon na wo yon daime hokage to mousu. What is this decree? naruto no nakigoe. Kage Bunshin No Jutsu",
+      'Sharing is creating. Listening and Clearly defining the Vision is the first step on the path of success.',
   },
   {
     id: 2,
-    title: 'Agility',
+    title: 'Honesty',
+    quote: 'Build, Break, Learn',
     info:
-      "Na ha Unchiha Sasuke kirai na mono nara takusan aru ga suki na mon ha betsuni nai, axtsu. Suki na mono ha betsuni nai, axtsu. No likes in particular. Sorekara yume nante kotoba de oware su ki ha nai ga. I don't feel like summing up my ambition as just a dream. korosu koto da. Essentially it's a skill used to quickly switch one's own body with an object or an animal. Teki ni kochira ga kougeki wo uke ta ka no you ni sakkaky sa se. He used Naruto's attack on him",
+      'Somethings might seem nice to have. Somthings might seem valuable to have. There is only one way to know for sure and it starts with finishing. Building iterations of your vision and opening the vision to others for feedback will bring honesty to the vision.',
   },
   {
     id: 3,
     title: 'Growth',
+    quote: 'A seed does not yet understand what it takes to be a tree',
     info:
-      "Na ha Unchiha Sasuke kirai na mono nara takusan aru ga suki na mon ha betsuni nai, axtsu. Suki na mono ha betsuni nai, axtsu. No likes in particular. Sorekara yume nante kotoba de oware su ki ha nai ga. I don't feel like summing up my ambition as just a dream. korosu koto da. Essentially it's a skill used to quickly switch one's own body with an object or an animal. Teki ni kochira ga kougeki wo uke ta ka no you ni sakkaky sa se. He used Naruto's attack on him Uma Tora Katon: Gokakyuu no Jutsu! i nai ushiro? iya ue ka? Doko da? ore ni shika ano otoko ha koreo se nai. It's oke there is no sign of him now. Where's the real Naruto? honmono no naruto ha doko da. Sakki an o shikenkan ni tsuke rare ta kizu ha dou shi ta. ANd you're shuriken holster is on your left leg. That guy's right handed te mexe ha naruto yori henka ga heta da na. Nesemono yarou. Katon: Hosenka no Jutsu",
+      'Nurture the vision, expose it to the elements, support it through the difficult times and you will be amazed with what is growing in front of you.',
   },
 ];
 export default accordion;

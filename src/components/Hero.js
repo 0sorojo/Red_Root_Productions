@@ -6,11 +6,11 @@ const Hero = () => {
     <section className='hero'>
       <div className='hero-center'>
         <article className='hero-info'>
-          <h1>Web Help for Small Businesses</h1>
-          <h3>Take Your Business to Where Your Customers Are</h3>
+          <h1>A Full-Stack Engineer</h1>
+          <h3>with Empathy, Skills, and Willingness to Learn</h3>
           <button className='btn'>
             <Link className='btn' to='/contact'>
-              Start Now
+              Contact Now
             </Link>
           </button>
         </article>

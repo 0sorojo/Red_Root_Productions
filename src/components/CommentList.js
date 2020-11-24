@@ -12,7 +12,7 @@ const CommentList = ({ id }) => {
   console.log(filteredComments);
 
   return (
-    <div>
+    <div className='comment-container'>
       <h3 className='comment'>Comments</h3>
       <div className='sort-bar'>
         <label htmlFor='sort'>Sort by:</label>

@@ -24,7 +24,7 @@ const CommentForm = ({ id }) => {
   };
 
   return (
-    <div className='form-container'>
+    <div className='comment-form-container'>
       <h4>Leave a Comment</h4>
       <form onSubmit={onSubmit} className='form'>
         <div className='comment-info'>

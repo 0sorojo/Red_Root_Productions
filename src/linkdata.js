@@ -28,18 +28,18 @@ export const links = [
     text: 'about this site',
     icon: <FaFolderOpen />,
   },
-  {
-    id: 4,
-    url: '/solutions',
-    text: 'solutions',
-    icon: <FaBriefcase />,
-  },
-  {
-    id: 5,
-    url: '/benefits',
-    text: 'benefits',
-    icon: <FaDollarSign />,
-  },
+  // {
+  //   id: 4,
+  //   url: '/solutions',
+  //   text: 'solutions',
+  //   icon: <FaBriefcase />,
+  // },
+  // {
+  //   id: 5,
+  //   url: '/benefits',
+  //   text: 'benefits',
+  //   icon: <FaDollarSign />,
+  // },
   {
     id: 6,
     url: '/contact',
