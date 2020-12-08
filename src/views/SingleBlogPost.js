@@ -5,7 +5,6 @@ import { useCallback } from 'react';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 import moment from 'moment';
-import { ImQuotesLeft, ImQuotesRight } from 'react-icons/im';
 
 const SingleBlogPost = () => {
   const { id } = useParams();
@@ -46,8 +45,7 @@ const SingleBlogPost = () => {
         </h4>
         <p className='blog-text'>{blog.bodyOne}</p>
         <div className='quote-container'>
-          <ImQuotesLeft />
-          <h2>{blog.quote}</h2> <ImQuotesRight />
+          <h2>{blog.quote}</h2>
         </div>
         <p className='blog-text'>{blog.bodyTwo}</p>
       </article>

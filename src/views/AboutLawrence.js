@@ -31,13 +31,13 @@ const AboutLawrence = () => {
         Grand Circus taught me how to collaborate professionally in a remote
         environment.{' '}
       </p>
-      <h3 className='profile-txt'>
+      <p className='profile-txt bold'>
         I am a valuable asset because I am unique. My goals and thoughts are
         focused on a wholistic understanding of each situation. I take the time
         to reflect on each problem and I try to find the place where I can best
         contribute. I am a team first person and helping a team accomplish its
         goal is my number one skill.
-      </h3>
+      </p>
     </main>
   );
 };
