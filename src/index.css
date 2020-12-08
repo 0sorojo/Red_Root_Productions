@@ -219,6 +219,9 @@ p {
   h4 {
     line-height: 1;
   }
+  p {
+    font-size: 1.25rem;
+  }
 }
 
 .btn {
@@ -440,6 +443,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  border-bottom: 2px groove var(--clr-green-light);
 }
 
 .accordion {
@@ -447,7 +451,7 @@ p {
   background: var(--clr-orange);
   align-items: center;
   display: flex;
-  border-bottom: 2px groove var(--clr-green-light);
+  /* border-bottom: 2px groove var(--clr-green-light); */
   justify-content: space-between;
 }
 
@@ -483,6 +487,17 @@ p {
 
 .rotate {
   transform: rotate(90deg);
+}
+
+@media screen and (min-width: 800px) {
+  .accordion,
+  .accordion-text {
+    padding: 0 21rem;
+  }
+
+  .arrow-btn {
+    margin-right: 2rem;
+  }
 }
 
 /* Home Page Blog List Styling */
@@ -599,6 +614,31 @@ p {
   border-radius: var(--radius);
 }
 
+@media screen and (min-width: 800px) {
+  .home-blog-container {
+    width: 70vw;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .sort-bar {
+    justify-content: center;
+  }
+
+  .sort-bar label {
+    flex: none;
+  }
+
+  .sort-bar select {
+    width: 20%;
+    flex: none;
+  }
+
+  .blog-list {
+    width: 63vw;
+  }
+}
+
 /* commment styling  */
 
 .comment-container {
@@ -660,6 +700,12 @@ textarea {
   margin: 1rem 0;
 }
 
+@media screen and (min-width: 800px) {
+  .comment-title {
+    font-size: 1.5rem;
+  }
+}
+
 /* contact form styling  */
 
 .form-container {
@@ -704,6 +750,21 @@ textarea {
   height: 200px;
   align-items: center;
   padding: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .form-container {
+    /* margin-top: 20rem; */
+    width: 65vw;
+    margin: 0 auto;
+    padding-top: 5rem;
+  }
+
+  .contact-info label,
+  input,
+  textarea {
+    margin-bottom: 1rem;
+  }
 }
 
 /* control panel styling */
@@ -811,6 +872,19 @@ textarea {
 .small-logo {
   width: 100px;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .small-logo-container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .small-logo {
+    height: 100px;
+    width: auto;
+  }
 }
 /* footer styling  */
 

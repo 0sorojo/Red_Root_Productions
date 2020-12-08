@@ -36,7 +36,7 @@ const ContactForm = () => {
 
   return (
     <div className='form-container'>
-      <h2>Contact Us</h2>
+      <h2>Contact Me</h2>
       {!isSent ? (
         <form className='form' onSubmit={onSubmit}>
           <h4>

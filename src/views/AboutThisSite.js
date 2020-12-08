@@ -12,8 +12,8 @@ const AboutThisSite = () => {
       </div>
       <h3>Built Using the FiRe Stack</h3>
       <div className='small-logo-container'>
-        <img src={RR} alt='React-Router' className='small-logo' />
         <img src={netlify} alt='Netlify' className='small-logo' />
+        <img src={RR} alt='React-Router' className='small-logo' />
         <img src={git} alt='Git' className='small-logo' />
       </div>
     </main>
