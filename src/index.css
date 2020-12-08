@@ -247,7 +247,8 @@ p {
   align-items: center;
   justify-content: center;
   background: var(--clr-white);
-  position: relative;
+  position: sticky;
+  top: 0;
   transition: var(--transition);
   transform: translate(0%);
   z-index: 1;
@@ -342,7 +343,8 @@ p {
 }
 .logo {
   justify-self: center;
-  height: 40px;
+  /* height: 40px; */
+  width: 15vh;
 }
 
 .link a {
@@ -809,7 +811,7 @@ textarea {
 
 .footer {
   height: 4rem;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background: transparent;
