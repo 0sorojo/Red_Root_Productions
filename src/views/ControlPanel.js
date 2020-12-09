@@ -10,7 +10,7 @@ const ControlPanel = () => {
 
   return (
     <div className='control-container'>
-      <h3 className='control-title'>upload/edit/delete blog posts</h3>
+      <h3 className='control-title'>upload blog posts</h3>
       <UploadForm file={file} setFile={setFile} setFileUrl={setFileUrl} />
       <BlogPostForm fileUrl={fileUrl} setFileUrl={setFileUrl} />
       <button onClick={handleLogOut} className='control-btn'>

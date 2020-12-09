@@ -772,9 +772,11 @@ textarea {
 .control-container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5rem;
 }
 
 .control-title {
+  align-self: center;
   display: flex;
   font-size: 2rem;
   padding: 1rem;

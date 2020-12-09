@@ -6,6 +6,7 @@ const BlogPostForm = ({ fileUrl, setFileUrl }) => {
   const [bodyOne, setBodyOne] = useState('');
   const [quote, setQuote] = useState('');
   const [bodyTwo, setBodyTwo] = useState('');
+  const [imageAlt, setImageAlt] = useState('');
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ const BlogPostForm = ({ fileUrl, setFileUrl }) => {
       .firestore()
       .collection('blog')
       .add({
+        imageAlt,
         title,
         fileUrl,
         bodyOne,
@@ -22,6 +24,7 @@ const BlogPostForm = ({ fileUrl, setFileUrl }) => {
         time: new Date().getTime(),
       })
       .then(() => {
+        setImageAlt('');
         setTitle('');
         setBodyOne('');
         setQuote('');
@@ -34,6 +37,14 @@ const BlogPostForm = ({ fileUrl, setFileUrl }) => {
     <div className='form-container'>
       <form onSubmit={onSubmit} className='form'>
         <h4>Submit a Blog Post</h4>
+        <div className='comment-info'>
+          <label htmlFor='imageAlt'>Image Alt Text</label>
+          <input
+            type='text'
+            value={imageAlt}
+            onChange={(e) => setImageAlt(e.currentTarget.value)}
+          />
+        </div>
         <div className='comment-info'>
           <label htmlFor='title'>Title</label>
           <input

@@ -29,14 +29,14 @@ const SingleBlogPost = () => {
 
   useEffect(() => {
     getBlog();
-    console.log(id);
+    console.log(blog.imageAlt);
   }, [getBlog, id]);
 
   return (
     <section className='blog-container'>
       <article className='blog'>
         <h4 className='entry-type-name'>BLOG POST</h4>
-        <img src={blog.fileUrl} alt='' className='blog-image' />
+        <img src={blog.fileUrl} alt={blog.imageAlt} className='blog-image' />
         <div>
           <h3 className='blog-title'>{blog.title}</h3>
         </div>
