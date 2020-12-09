@@ -49,8 +49,8 @@ Variables
 /* } */
 
 :root {
-  --hero1: url(./images/yellowSVGHEROv1.svg);
-  --hero2: url(./images/purpleSVGHEROv1.svg);
+  --hero1: url(./images/sample-R2-svgHeroYellowv2.svg);
+  --hero2: url(./images/sample-R2-svgHeroBluev1.svg);
 }
 
 .light-theme {
