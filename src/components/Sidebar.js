@@ -21,7 +21,7 @@ const Sidebar = () => {
           const { id, url, text, icon } = link;
           return (
             <li key={id} className='link'>
-              <Link to={url} onClick={closeSidebar}>
+              <Link to={url} onClick={closeSidebar} title={text}>
                 {icon}
                 {text}
               </Link>
@@ -34,7 +34,13 @@ const Sidebar = () => {
           const { id, url, icon } = link;
           return (
             <li key={id}>
-              <a href={url} target='_blank' rel='noopener noreferrer'>
+              <a
+                href={url}
+                target='_blank'
+                rel='noopener noreferrer'
+                alt={url}
+                title={url}
+              >
                 {icon}
               </a>
             </li>

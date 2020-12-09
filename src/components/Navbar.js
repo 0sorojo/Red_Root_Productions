@@ -19,14 +19,27 @@ const Navbar = () => {
     <nav className={`${isSidebarOpen ? 'nav hide-nav' : 'nav'}`}>
       <div className='nav-center'>
         <div className='nav-header'>
-          <button className='btn bounce' onClick={openSidebar}>
+          <button
+            className='btn bounce'
+            onClick={openSidebar}
+            title='Click to See Menu'
+          >
             <FaBars />
           </button>
 
           <Link to='/'>
-            <img src={logo} alt='red root' className='nav-logo' />
+            <img
+              src={logo}
+              alt='red root'
+              className='nav-logo'
+              title='click to go home'
+            />
           </Link>
-          <button className='btn toggle' onClick={toggleTheme}>
+          <button
+            className='btn toggle'
+            onClick={toggleTheme}
+            title='click to toggle theme'
+          >
             {theme === 'light-theme' ? <FaToggleOn /> : <FaToggleOff />}
           </button>
         </div>
