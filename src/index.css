@@ -398,12 +398,13 @@ p {
   min-width: 100%;
   top: 0;
   left: 0;
-  /* background: var(--hero) center center; */
-  /* background-size: cover;
-  background-repeat: no-repeat; */
+  background: var(--hero) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: -1;
   transition: opacity 250ms;
 }
+
 .hero {
   position: relative;
   min-height: 600px;
