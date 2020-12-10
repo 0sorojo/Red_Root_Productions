@@ -12,11 +12,15 @@ const Hero = () => {
     if (theme === 'light-theme') {
       setThemeStyle({
         background: `url(${light}) center center`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
       });
     }
     if (theme === 'dark-theme') {
       setThemeStyle({
         background: `url(${dark}) center center`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
       });
     }
     return themeStyle;
