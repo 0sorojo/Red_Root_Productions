@@ -240,6 +240,7 @@ p {
 .btn:hover {
   background: transparent;
   outline: none;
+  color: var(--clr-red-dark);
 }
 
 /* Nav styling  */
@@ -343,6 +344,7 @@ p {
 }
 .close-btn:hover {
   color: var(--clr-red-light);
+  cursor: pointer;
 }
 .logo {
   justify-self: center;
@@ -416,6 +418,7 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  /* z-index: -3; */
 }
 .hero-center {
   width: 85vw;
@@ -436,9 +439,13 @@ p {
   max-width: 500px;
   margin-bottom: 2rem;
 }
-.hero-info p {
+.hero-info button {
   max-width: 35em;
   line-height: 1.8;
+}
+
+.front {
+  z-index: 2;
 }
 
 /* accordion styles */
@@ -458,6 +465,12 @@ p {
   display: flex;
   /* border-bottom: 2px groove var(--clr-green-light); */
   justify-content: space-between;
+}
+
+.accordion:hover {
+  background: var(--clr-green-dark);
+  transition: var(--transition);
+  cursor: pointer;
 }
 
 .accordion-title {
@@ -490,6 +503,12 @@ p {
   display: flex;
 }
 
+.arrow-btn:hover {
+  color: var(--clr-red-dark);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
 .rotate {
   transform: rotate(90deg);
 }
@@ -497,7 +516,18 @@ p {
 @media screen and (min-width: 800px) {
   .accordion,
   .accordion-text {
-    padding: 0 21rem;
+    padding: 0 10rem;
+  }
+
+  .arrow-btn {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .accordion,
+  .accordion-text {
+    padding: 0 20rem;
   }
 
   .arrow-btn {
@@ -602,13 +632,20 @@ p {
   margin-left: 1.5rem;
 }
 
+.blog-link:hover {
+  background: transparent;
+  outline: none;
+  color: var(--clr-red-dark);
+  transition: var(--transition);
+}
+
 .blog-link svg {
   font-size: 2rem;
   margin-right: 1rem;
   transition: var(--transition);
 }
 .blog-link:hover svg {
-  color: var(--clr-grey-4);
+  color: var(--clr-red-dark);
 }
 
 .blog-image {

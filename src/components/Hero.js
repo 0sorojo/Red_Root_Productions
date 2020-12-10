@@ -22,7 +22,7 @@ const Hero = () => {
         // backgroundClip: 'content-box',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        zIndex: '-1',
+        // zIndex: '-1',
         transition: 'opacity 250ms',
       });
     }
@@ -36,7 +36,7 @@ const Hero = () => {
         background: `url(${dark}) center center / cover no-repeat`,
         // backgroundSize: 'cover',
         // backgroundRepeat: 'no-repeat',
-        zIndex: '-1',
+        // zIndex: '-1',
         transition: 'opacity 250ms',
       });
     }
@@ -54,7 +54,7 @@ const Hero = () => {
           <h3>with Empathy, Skills, and Willingness to Learn</h3>
           <button className='btn'>
             <Link className='btn' to='/contact'>
-              Contact Now
+              Contact Me Now
             </Link>
           </button>
         </article>
