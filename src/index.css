@@ -391,7 +391,7 @@ p {
 
 /* Hero styling */
 
-.hero::before,
+/* .hero::before,
 ::after {
   content: '';
   position: absolute;
@@ -404,10 +404,10 @@ p {
   background-repeat: no-repeat;
   z-index: -1;
   transition: opacity 250ms;
-}
+} */
 
 .hero {
-  background: var(--hero) center center;
+  /* background: var(--hero) center center;*/
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;

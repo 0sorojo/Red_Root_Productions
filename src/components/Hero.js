@@ -11,12 +11,33 @@ const Hero = () => {
   const heroStyle = () => {
     if (theme === 'light-theme') {
       setThemeStyle({
-        '--hero': `url(${light})`,
+        // '--hero': `url(${light})`,
+        // position: 'absolute',
+        height: '100%',
+        width: '100%',
+        top: 0,
+        left: 0,
+        background: `url(${light}) center center`,
+        // backgroundOrigin: 'inherit',
+        // backgroundClip: 'content-box',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        zIndex: '-1',
+        transition: 'opacity 250ms',
       });
     }
     if (theme === 'dark-theme') {
       setThemeStyle({
-        '--hero': `url(${dark})`,
+        // '--hero': `url(${dark})`,
+        height: '100%',
+        width: '100%',
+        top: 0,
+        left: 0,
+        background: `url(${dark}) center center / cover no-repeat`,
+        // backgroundSize: 'cover',
+        // backgroundRepeat: 'no-repeat',
+        zIndex: '-1',
+        transition: 'opacity 250ms',
       });
     }
     return themeStyle;
