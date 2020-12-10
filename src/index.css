@@ -391,7 +391,8 @@ p {
 
 /* Hero styling */
 
-.hero::before {
+.hero::before,
+::after {
   content: '';
   position: absolute;
   min-height: 100%;
