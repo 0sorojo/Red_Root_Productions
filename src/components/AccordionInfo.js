@@ -27,15 +27,15 @@ const AccordionInfo = ({ title, quote, info }) => {
           <IoIosArrowDroprightCircle />
         </button>
       </header>
-      <p
+      <h4
         ref={content}
         style={{ maxHeight: `${height}`, margin: `${margin}` }}
         className='accordion-text'
       >
-        <h3>{quote}</h3>
+        <p className='bold'>{quote}</p>
 
         {info}
-      </p>
+      </h4>
     </article>
   );
 };

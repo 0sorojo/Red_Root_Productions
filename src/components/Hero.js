@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../context';
 import light from '../images/sample-R2-svgHeroYellowv2.svg';
@@ -8,7 +8,7 @@ const Hero = () => {
   const { theme } = useGlobalContext();
   const [themeStyle, setThemeStyle] = useState({});
 
-  const heroStyle = () => {
+  const heroStyle = useCallback(() => {
     if (theme === 'light-theme') {
       setThemeStyle({
         // '--hero': `url(${light})`,
@@ -40,13 +40,11 @@ const Hero = () => {
         transition: 'opacity 250ms',
       });
     }
-    return themeStyle;
-  };
+  }, [theme]);
 
   useEffect(() => {
     heroStyle();
-    console.log('i work');
-  }, [theme]);
+  }, [theme, heroStyle]);
 
   return (
     <section className='hero' style={themeStyle}>

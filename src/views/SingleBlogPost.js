@@ -29,7 +29,6 @@ const SingleBlogPost = () => {
 
   useEffect(() => {
     getBlog();
-    console.log(blog.title);
   }, [getBlog, id]);
 
   return (

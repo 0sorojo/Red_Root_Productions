@@ -5,8 +5,6 @@ import {
   FaHome,
   FaUserFriends,
   FaFolderOpen,
-  FaBriefcase,
-  FaDollarSign,
   FaHandsHelping,
 } from 'react-icons/fa';
 export const links = [
