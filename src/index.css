@@ -48,10 +48,10 @@ Variables
   --fixed-width: 620px; */
 /* } */
 
-:root {
+/* :root {
   --hero1: url(./images/sample-R2-svgHeroYellowv2.svg);
   --hero2: url(./images/sample-R2-svgHeroBluev1.svg);
-}
+} */
 
 .light-theme {
   /* dark shades of primary color*/
@@ -95,7 +95,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-  --hero: var(--hero1);
+  /* --hero: var(--hero1); */
 }
 
 .dark-theme {
@@ -140,7 +140,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-  --hero: var(--hero2);
+  /* --hero: var(--hero2); */
 }
 /*
 =============== 
@@ -398,7 +398,7 @@ p {
   min-width: 100%;
   top: 0;
   left: 0;
-  background: var(--hero) center center;
+  /* background: var(--hero) center center; */
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
