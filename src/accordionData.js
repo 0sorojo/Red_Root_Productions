@@ -4,14 +4,14 @@ const accordion = [
     title: 'Vision',
     quote: 'What does Success LOOK and FEEL like ',
     info:
-      'Sharing is creating. Listening and Clearly defining the Vision is the first step on the path of success.',
+      'Sharing is creating. Listening and Clearly defining the vision is the first step on the path of success.',
   },
   {
     id: 2,
     title: 'Honesty',
     quote: 'Build, Break, Learn',
     info:
-      'Somethings might seem nice to have. Somthings might seem valuable to have. There is only one way to know for sure and it starts with finishing. Building iterations of your vision and opening the vision to others for feedback will bring honesty to the vision.',
+      'Somethings might seem nice to have. Somethings might seem valuable to have. There is only one way to know for sure and it starts with finishing. Building iterations of your vision and opening the vision to others for feedback will bring honesty to the vision.',
   },
   {
     id: 3,
